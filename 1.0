@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Scrolling Widget</title>
+<style>
+  /* CSS for styling the widget */
+  #scrolling-text {
+    width: 300px;
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    
+    padding: 10px; /* Add padding to ensure text doesn't touch the border */
+    font-family: 'Pixelify Sans', sans-serif; /* Pixelify Sans font */
+    font-size: 11px; /* Adjust font size as needed */
+    color: #5aedf5; /* Teal color */
+  }
+  #scrolling-content {
+    animation: scroll-up 190s linear infinite; /* Adjust duration (10s) as needed */
+  }
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(calc(-100% - 20px)); /* Adjust distance between repetitions */
+    }
+  }
+</style>
+<!-- Link to Pixelify Sans font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify+Sans&display=swap">
+</head>
+<body>
+
+<div id="scrolling-text">
+  <div id="scrolling-content">
+   Put text<br>
+   here<br>
+and here and here<br>
+  </div>
+</div>
+
+</body>
+</html>
